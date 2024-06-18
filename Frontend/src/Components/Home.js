@@ -40,7 +40,7 @@ const Home = () => {
         <div className=''>
       <form className=''>
         <label htmlFor='task'>Create Your Task :</label>
-        <input type='text' id = "task" placeholder='Create New Task' className='outline ml-3 ' onChange={(e)=>handleTask(e)}/>
+        <input type='text' id = "task" placeholder='    Create Task Here ...  ' className='outline ml-3 placeholder:text-gray-400' onChange={(e)=>handleTask(e)}/>
       </form>
 
       <button className='bg-blue-500 rounded-xm rounded-full p-2 mt-8 ml-28' onClick={(e)=>handleSubmit(e)}>Submit</button>
@@ -48,8 +48,9 @@ const Home = () => {
 
       
     </div>
-
-
+<div className='flex justify-center items-center m-3'>
+    <div className='font-bold text-3xl'>Your List of Tasks ...</div>
+    </div>
     <div className='grid grid-cols-3 gap-4 m-6 bg-gray-200'>
         {taskall && taskall.map((task)=> {
             return <div className='bg-yellow-200 rounded-sm w-[350px] h-[100px'>Task Title :{task.task}</div>
